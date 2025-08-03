@@ -1,0 +1,138 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1ec;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+a {
+    color: #f0f8ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bar {
+    background-color: #6a9fb5;
+    padding: 15px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+    color: #fff;
+}
+
+.content {
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+    text-align: center;
+    padding: 1rem;
+    font-size: 16px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    border-right: solid 1px #cdcdcd;
+    background-color: #6a9fb5;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.anchors {
+    grid-area: anchors;
+    border-left: solid 1px #cdcdcd;
+    background-color: #6a9fb5;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.main {
+    grid-area: main;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+i {
+    margin-right: 8px;
+    color: #333;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-areas:
+            "sidebar"
+            "main"
+            "anchors";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar,
+    .anchors {
+        border: none;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+        border-radius: 0;
+    }
+
+    .sidebar h2,
+    .anchors h2 {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .bar {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .content {
+        gap: 2rem;
+        padding: 0.5rem;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
